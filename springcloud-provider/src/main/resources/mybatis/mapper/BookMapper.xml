@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jk.Mapper.BookMapper">
+
+    <select id="queryBookList"  resultType="com.jk.model.BookBean">
+
+     select * from t_book
+    </select>
+
+    <insert id="addBook" parameterType="com.jk.model.BookBean">
+
+     insert  into t_book(userName,bookName) values(#{userName},#{bookName})
+    </insert>
+
+</mapper>
